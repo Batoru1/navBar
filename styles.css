@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(221, 236, 206);
+  margin: 0;
+}
+
+nav {
+  background-color: aliceblue;
+  margin: 0;
+}
+
+.nav-center {
+  display: flex;
+}
+
+.logo {
+  width: 4em;
+  height: 4em;
+}
+
+.nav-header {
+  display: flex;
+  /* justify-content: space-between; */
+  margin: 1.5em 1em 1.5em 1em;
+}
+
+.nav-toggle {
+  background-color: transparent; /*to remove the default grey background*/
+  border: none; /*to remove the default grey background*/
+  font-size: x-large;
+  /* display: flex;
+  align-items: center; */
+  margin-left: auto;
+  order: 2;
+}
+
+.links {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  align-items: center;
+}
