@@ -31,7 +31,7 @@ nav {
   background-color: transparent; /*to remove the default grey background*/
   border: none; /*to remove the default grey background*/
   font-size: x-large;
-  order: 4;
+  color: rgb(150, 206, 187);
 }
 
 .links {
@@ -41,9 +41,7 @@ nav {
   align-items: center;
   text-transform: capitalize;
   letter-spacing: 0.2em;
-  /* opacity: 1;
-  transform: translateX(-100%);
-  transition: opacity 2s ease, transform 2s ease; */
+  transition: all 0.5s ease-out;
 }
 
 .links a {
@@ -53,6 +51,22 @@ nav {
 
 .links a:hover {
   color: rgb(160, 103, 32);
+}
+
+/* styles for  links after screen shrink*/
+
+.links.show {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  list-style: none;
+  align-items: flex-start;
+  text-transform: capitalize;
+  letter-spacing: 0.2em;
+  position: absolute;
+  left: 0;
+  top: 20%;
+  transform: translateY(-20%);
 }
 
 .social-icons {
@@ -72,40 +86,47 @@ nav {
   color: rgb(56, 159, 56);
 }
 
-@media (min-width: 901px) {
+@media (min-width: 851px) {
   .nav-toggle {
     display: none;
   }
   .links {
-    transform: translateX(0);
-    display: flex;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
   }
 
   .social-icons {
-    transform: translateX(0);
-    display: flex;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
   .links {
     display: none;
-    /* transform: translateX(-100%); */
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
   }
 
   .social-icons {
     display: none;
-    /* transform: translateX(-100%); */
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
   }
 
   .nav-toggle:hover {
     cursor: pointer;
+    color: rgb(186, 213, 204);
+    transform: rotate(-90deg);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
   }
 
   .nav-header {
     display: flex;
     justify-content: space-between;
     width: 30em;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
   }
 }
-/*jus checking git commit -m function*/
