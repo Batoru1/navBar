@@ -99,6 +99,15 @@ nav {
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
   }
+  .links.show {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    align-items: center;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+    transition: all 0.5s ease-out;
+  }
 }
 
 @media (max-width: 850px) {
